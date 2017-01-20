@@ -11,8 +11,13 @@
 |
 */
 
+Route::get('/', function () {
+    return view('home');
+});
+
 // show all orders
 Route::get('orders', 'OrdersController@index');
+
 
 
 

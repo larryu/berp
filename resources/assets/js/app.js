@@ -12,9 +12,32 @@ require('./bootstrap');
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+import Home      from './components/Home.vue'
+import Order      from './components/Order.vue'
+import Product    from './components/Product.vue'
+import Item       from './components/Item.vue'
+import VueRouter  from 'vue-router'
+import router     from './router'
+import Vue        from 'vue'
+import VuePaginator from 'vuejs-paginator'
 
-Vue.component('example', require('./components/Example.vue'));
+// Create and mount root instance.
+// Make sure to inject the router.
+// Route components will be rendered inside <router-view>.
+new Vue({
 
-const app = new Vue({
-    el: '#app'
-});
+    router,
+
+    components : {
+        VPageinator: VuePaginator,
+        Home,
+        Order,
+        Product,
+        Item
+    },
+
+    data : {
+
+    }
+
+}).$mount('#app')

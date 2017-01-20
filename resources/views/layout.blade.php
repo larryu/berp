@@ -9,14 +9,23 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         @yield('header')
     </head>
     <body>
-    <div class="container">
-    @yield('content')
+    <div id="app">
+        <div class="container">
+        @yield('content')
+        </div>
+
+        @yield('footer')
     </div>
-    
-    @yield('footer')
+    {{-- / setting value to your CSRFglobal variables  --}}
+    <script>
+        window.Laravel = <?php echo json_encode([
+                'csrfToken' => csrf_token(),
+        ]); ?>
+    </script>
+    <script src="/js/app.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </body>
 </html>

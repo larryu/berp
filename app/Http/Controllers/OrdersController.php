@@ -15,10 +15,10 @@ class OrdersController extends Controller
      */
     public function index()
     {
-        //$orders = Order::all();
-        //return view('orders.index', compact('orders'));
+        $orders = Order::all();
+        return view('orders.index', compact('orders'));
         //return Order::paginate();
-        return Order::all();
+        //return Order::all();
     }
 
     /**
