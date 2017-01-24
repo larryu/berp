@@ -8,7 +8,7 @@
 
         git clone https://github.com/larryu/berp.git
     
-3. Once finished, change directory to laravel-vue-crud:
+3. Once finished, change directory to berp:
 
         cd berp
     
