@@ -43,3 +43,7 @@
 
 11. Open `http://localhost:8000/` in your web browser.
 
+12. For third part to import order, please post json data to the following url
+    http://localhost:8000/api/orders
+
+
