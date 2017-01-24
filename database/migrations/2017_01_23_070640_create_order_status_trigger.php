@@ -8,6 +8,9 @@ class CreateOrderStatusTrigger extends Migration
 {
     /**
      * Run the migrations.
+     * This trigger is used to implement the status update for the order
+     * All the status of the items attached to this order are delivered then the order status will be changed to Completed
+     * All the items are deleted from this order then the order status will be changed to Cancelled
      *
      * @return void
      */
