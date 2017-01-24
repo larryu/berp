@@ -1,0 +1,13 @@
+
+{
+  "order":
+  {
+    "customer": "test1",
+    "address": "test1 address",
+    "total": 100,
+    "items": [
+      {"sku": "TESTSKU1", "quantity":2},
+      {"sku": "TESTSKU2", "quantity":1}
+    ]
+  }
+}

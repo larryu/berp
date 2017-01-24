@@ -16,7 +16,7 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('id');
             $table->string('customer_name');
-            $table->string('address');
+            $table->string('address')->nullable();
             $table->enum('status', ['Cancelled', 'In progress', 'Completed'])->default('In progress');
             $table->timestamp('order_date')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamps();

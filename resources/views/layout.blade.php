@@ -9,6 +9,7 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
         @yield('header')
     </head>
     <body>
@@ -27,5 +28,6 @@
     </script>
     <script src="/js/app.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
     </body>
 </html>

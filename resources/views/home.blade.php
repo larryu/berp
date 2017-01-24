@@ -4,7 +4,7 @@
 
     <div class="row">
 
-        <div class="col-md-8 col-md-offset-3">
+        <div class="col-md-10">
             <h1> Berp Home </h1>
             <router-view class="view"></router-view>
         </div>

@@ -93,15 +93,4 @@ class OrdersController extends Controller
     {
     }
 
-    /** get all orders from api
-     * @return mixed
-     */
-    public function apiIndex()
-    {
-        $orders = Order::all();
-
-        return response()->json([
-            'data' => $orders->toArray()
-        ], 200);
-    }
 }

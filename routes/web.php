@@ -18,6 +18,21 @@ Route::get('/', function () {
 // show all orders
 Route::get('orders', 'OrdersController@index');
 
+// show all items
+Route::get('items/{orderId}', 'ItemsController@index');
 
+// show all products
+Route::get('products', 'ProductsController@index');
 
+Route::get('item/available', 'ItemsController@available');
 
+Route::get('/emailnotify', function() {
+    $order = App\Order::first();
+    $product = App\Product::first();
+
+    $order->notify(new \App\Notifications\ProductCreated($product));
+});
+
+Route::get('/products/view/{productId}', function() {
+    return view('home');
+});

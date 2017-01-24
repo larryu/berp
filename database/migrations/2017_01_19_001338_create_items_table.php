@@ -15,7 +15,7 @@ class CreateItemsTable extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('order_id')->unsigned()->index();
+            $table->integer('order_id')->nullable();
             $table->integer('product_id')->unsigned()->index();
             $table->enum('status',['Available', 'Assigned']);
             $table->enum('physical_status', ['To order', 'In warehouse', 'Delivered']);
