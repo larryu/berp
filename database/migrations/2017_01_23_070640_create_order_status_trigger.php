@@ -37,8 +37,8 @@ class CreateOrderStatusTrigger extends Migration
                                 update orders set status = "Cancelled" where id = new.order_id;
                             elseif ($countItems = $countDeliveredItems) then
                                 update orders set status = "Completed" where id = new.order_id;
-							else
-								update orders set status = "In progress" where id = new.order_id;
+                            else
+                                update orders set status = "In progress" where id = new.order_id;
                             end if;
                         end;
                     end if;
@@ -50,8 +50,8 @@ class CreateOrderStatusTrigger extends Migration
                                 update orders set status = "Cancelled" where id = old.order_id;
                             elseif ($countItems = $countDeliveredItems) then
                                 update orders set status = "Completed" where id = old.order_id;
-							else
-								update orders set status = "In progress" where id = new.order_id;
+                            else
+                                update orders set status = "In progress" where id = old.order_id;
                             end if;
                         end;
                     end if;
