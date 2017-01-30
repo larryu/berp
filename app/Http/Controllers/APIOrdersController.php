@@ -133,7 +133,9 @@ class APIOrdersController extends Controller
                     if (count($items) > 0)
                     {
                         // found
+
                         $item = $items[0];
+                        $item->order_id = $order->id;
                         $item->status = Item::STS_ASSIGNED;
                         $item->save();
                     }
